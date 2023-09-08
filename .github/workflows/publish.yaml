@@ -3,7 +3,7 @@ on:
   push:
     path:
       - 'debian/**'
-      - 'etc/**'
+      - 'resources/**'
 jobs:
   publish:
     runs-on: ubuntu-latest

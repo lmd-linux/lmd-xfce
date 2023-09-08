@@ -1,0 +1,35 @@
+#! /bin/sh
+set -e
+
+if ! grep -q "^# lmd Linux configuration$" /etc/lightdm/lightdm.conf; then
+    cat << EOF >> /etc/lightdm/lightdm.conf
+
+# lmd Linux configuration
+[Seat:*]
+greeter-hide-users=false
+EOF
+    fi
+
+if ! grep -q "^# lmd Linux configuration$" /etc/lightdm/lightdm-gtk-greeter.conf; then
+    cat << EOF >> /etc/lightdm/lightdm-gtk-greeter.conf
+
+# lmd Linux configuration
+[greeter]
+theme-name=Greybird-dark
+icon-theme-name=elementary-xfce-dark
+background=#202020
+user-background=false
+xft-antialias=true
+xft-dpi=192
+xft-hintstyle=full
+xft-rgba=rgb
+indicators=~host;~spacer;~clock;~spacer;~power
+clock-format=%A, %d %B %Y - %H:%M:%S %Z
+screensaver-timeout=10
+EOF
+    fi
+
+update-alternatives --install /usr/share/images/desktop-base/desktop-background desktop-background \
+    /usr/share/images/lmd-background.png 90
+
+#DEBHELPER#

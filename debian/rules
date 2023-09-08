@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	DESTDIR=$$(pwd)/debian/lmd-xfce; \
+	cd resources; \
+	for FILE in $$(find * -type f); do \
+		install -m 644 -D -t $${DESTDIR}/$${FILE%/*} $${FILE}; \
+	done
