@@ -7,7 +7,29 @@ Build-Depends: debhelper-compat (= 13)
 
 Package: lmd-xfce
 Architecture: all
-Depends: lmd-desktop, elementary-xfce-icon-theme, greybird-gtk-theme, light-locker, lightdm-gtk-greeter, network-manager-gnome, xfce4, xfce4-notifyd, xfce4-power-manager, xfce4-terminal, xfce4-whiskermenu-plugin
-Recommends: blueman, galculator, menulibre, mousepad, mugshot, mpv, pkexec, ristretto, seahorse, thunar-archive-plugin, tumbler-plugins-extra, xfce4-screenshooter
+Depends:
+ blueman,
+ elementary-xfce-icon-theme,
+ galculator,
+ greybird-gtk-theme,
+ light-locker,
+ lightdm-gtk-greeter,
+ lmd-desktop,
+ menulibre,
+ mousepad,
+ mpv,
+ mugshot,
+ network-manager-gnome,
+ pkexec,
+ ristretto,
+ seahorse,
+ thunar-archive-plugin,
+ tumbler-plugins-extra,
+ xfce4,
+ xfce4-notifyd,
+ xfce4-power-manager,
+ xfce4-screenshooter,
+ xfce4-terminal,
+ xfce4-whiskermenu-plugin
 Description: XFCE for lmd Linux
  Collection of XFCE packages and configurations for lmd Linux
