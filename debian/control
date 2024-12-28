@@ -12,6 +12,7 @@ Depends:
  elementary-xfce-icon-theme,
  galculator,
  greybird-gtk-theme,
+ libglib2.0-bin,
  light-locker,
  lightdm-gtk-greeter,
  lmd-desktop,
